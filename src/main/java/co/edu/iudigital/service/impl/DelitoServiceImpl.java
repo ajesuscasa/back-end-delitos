@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.AssociationOverride;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +23,8 @@ public class DelitoServiceImpl implements IDelitoService{
 	private List<Delito> deltoDto;
 	
 		
-	@Override
-	public List<Delito> finfAll() {
+	@AssociationOverride(name = "")
+	public List<Delito>delitos  {
 		List<Delito> delitos = delitoRepository.findAll();
 		List<Delito> delitoDto = new ArrayList<>();
 		
@@ -43,7 +45,7 @@ public class DelitoServiceImpl implements IDelitoService{
 		}
 		);
 			
-		return deltoDto;
+		return delitoDto;
 	}
 
 	@Override
@@ -62,6 +64,12 @@ public class DelitoServiceImpl implements IDelitoService{
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<DelitoDto> finfAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

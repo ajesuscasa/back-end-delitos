@@ -1,12 +1,6 @@
 package co.edu.iudigital.controller;
 
 
-
-
-
-
-
-
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -20,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.iudigital.dto.DelitoDto;
 import co.edu.iudigital.service.iface.IDelitoService;
-import co.edu.iudigital.service.impl.DelitoServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.SwaggerDefinition;
