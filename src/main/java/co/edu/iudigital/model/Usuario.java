@@ -16,9 +16,12 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.ManyToAny;
-import org.hibernate.validator.constraints.Length;
+
+
+
 
 
 
@@ -49,7 +52,7 @@ public class Usuario implements Serializable{
 	
 	
 	@NotEmpty(message = "apellido es obligatorio")
-	@Length(min = 1, max = 120)
+	@Size(min = 1, max = 120)
 	@Column(nullable = false)
 	private String apellido;
 	

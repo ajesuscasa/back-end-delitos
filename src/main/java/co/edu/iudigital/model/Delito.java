@@ -49,14 +49,23 @@ public class Delito implements Serializable{
 	 * @return the nombred
 	 */
 	public String getNombred() {
-		return nombred;
+		return nombre;
+	}
+
+	
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
 	}
 
 	/**
-	 * @param nombred the nombred to set
+	 * @param nombre the nombre to set
 	 */
-	public void setNombred(String nombred) {
-		this.nombred = nombred;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	/**
