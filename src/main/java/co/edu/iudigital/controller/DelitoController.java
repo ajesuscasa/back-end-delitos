@@ -8,11 +8,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.iudigital.dto.DelitoDto;
+import co.edu.iudigital.model.Delito;
 import co.edu.iudigital.service.iface.IDelitoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -50,6 +52,18 @@ public class DelitoController {
 		log.info("inicio index controlador");
 		return delitoService.finfAll();
 		
+	}
+	@ApiOperation(value = "Obtiene un delito por id",
+			response = Delito.class,
+			produces = "aplication/json",
+			httpMethod = "Get")
+	@ResponseStatus(code = HttpStatus.OK)
+	@GetMapping("/delito/{id}")
+	public Delito show(@PathVariable final Long id) {
+		return delitoService.findById(id);
+ 
+// @formatter:on
+
 	}
 	 
 }
